@@ -1,0 +1,35 @@
+.paginat-container {
+    display: flex;
+    justify-content: center;
+}
+
+.paginat {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-item .page-link {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.page-item.active .page-link {
+    background-color: #000000;
+    color: white;
+    border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    cursor: not-allowed;
+}

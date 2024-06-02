@@ -1,0 +1,914 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-style: italic; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+
+  /* If you want to Change the font-family of whole application just change it in StartCoursePage.css; */
+}
+
+html {
+  height: 100%;
+}
+/* body{
+  overflow: hidden; 
+} */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+}
+
+.left-container {
+  flex: 0 0 30%;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.content-heading {
+  background-color: #000000;
+  padding: 5px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.left-content {
+  height: 99vh;
+  border: 1px solid #6b6b6b;
+  overflow-y: auto;
+}
+
+.right-container {
+  flex: 0 0 70%;
+  padding: 5px;
+  background-color: rgb(233, 230, 230);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 99vh;
+}
+
+.right-content-top,
+.right-content-bottom {
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.right-content-top {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+
+.right-content-bottom {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+
+.clickable-title {
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.step-title {
+  margin-left: 10px;
+}
+
+.stepwithoption {
+  display: inline-block;
+}
+
+.editicon {
+  transition: 0.5s;
+}
+
+.editicon:hover {
+  color: blue;
+  transform: scale(1.5);
+}
+
+.trashicon {
+  transition: 0.5s;
+}
+
+.trashicon:hover {
+  color: red;
+  transform: scale(1.5);
+}
+
+.btn.active {
+  font-size: 15px;
+}
+
+.maincntn {
+  width: auto;
+  min-height: 100vh;
+  max-height:fit-content;
+  /* overflow: scroll; */
+}
+/* .is-scrollLocked {
+  overflow: hidden;
+} */
+
+.groupdiv {
+  width: auto;
+  height: 100vh;
+  /* overflow: scroll; */
+}
+
+.maindashboarddiv {
+  width: auto;
+  min-height: 100vh;
+  max-height:fit-content;
+  /* overflow: scroll; */
+}
+
+.userdiv {
+  width: auto;
+  height: 100vh;
+  /* overflow: scroll; */
+}
+
+.quizdiv {
+  width: auto;
+  height: 100vh;
+  /* overflow: scroll; */
+}
+
+.usergroupdiv {
+  width: auto;
+  height: 100vh;
+  /* overflow: scroll; */
+}
+
+.reportdiv {
+  width: auto;
+  height: 100vh;
+  /* background-color: yellow; */
+  /* overflow: scroll; */
+}
+
+.questions-container {
+  width: auto;
+  height: 100vh;
+  /* overflow: scroll; */
+}
+
+/* Basic Progress Bar: */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Basic Progress Bar: */
+/* .progress-bar-fill {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.3s ease-in-out;  Optional: Add transition effect 
+} */
+
+/* Animated Progress Bar: */
+/* .progress-bar-fill {
+  height: 100%;
+  background-color: #007bff;
+  animation: progress-animation 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes progress-animation {
+  0% { width: 0; }
+  100% { width: 100%; }
+} */
+
+/* Gradient Progress Bar: */
+.progress-bar-fill {
+  height: 100%;
+  /* background: linear-gradient(to right, red, #007bff, #00ff00); */
+  background: #007bff;
+}
+
+/* Striped Progress Bar: */
+/* .progress-bar-fill {
+  height: 100%;
+  background-color: #007bff;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+}  */
+
+
+
+@media only screen and (max-width: 932px) and (max-height: 430px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv {
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* margin-top: 0px !important;  */
+    /* padding-bottom: 0px !important; */
+    /* height: auto !important;       */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv,
+  .reportdiv .questions-container {
+    height: auto;
+  } */
+}
+
+@media only screen and (max-width: 430px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv {
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* margin-top: 0px !important; */
+    /* padding-bottom: 250px !important;  */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+}
+
+@media only screen and (min-width: 431px) and (max-width: 600px) {
+  .maincntn , .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv{
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* margin-top: 0px !important; */
+    /* margin: 0px !important; 
+    padding-bottom: 250px !important;  */
+    /* height: auto !important;       */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+  /* @page {
+    size: landscape; /* Set the page orientation to landscape 
+  } */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv {
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* padding-bottom: 250px !important; */
+    /* height: auto !important;     */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+  @page {
+    size: landscape;
+    /* Set the page orientation to landscape */
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv {
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* padding-bottom: 20  0px !important; */
+    /* height: auto !important; */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv {
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* padding-bottom: 350px !important; */
+    /* height: auto !important; */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv {
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* padding-bottom: 400px !important; */
+    /* height: auto !important; */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+}
+
+@media only screen and (min-width: 1501px) and (max-width: 2100px) {
+  .maincntn, .userdiv,.groupdiv,
+  .quizdiv, .usergroupdiv, .maindashboarddiv{
+    max-width: 100%;
+    height: auto;
+    /* overflow: scroll; */
+    /* height: auto; */
+    /* padding-bottom: 450px !important; */
+    /* height: auto !important; */
+  }
+
+  /* .groupdiv,
+  .maindashboarddiv,
+  .userdiv,
+  .quizdiv,
+  .usergroupdiv{
+    height: auto;
+  } */
+}
+
+
+
+/* h1 {
+
+  text-align: center;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #202020;
+
+  text-transform: uppercase;
+
+  word-spacing: 1px;
+
+  letter-spacing: 2px;
+
+  text-decoration: underline;
+
+}
+
+.panel {
+
+  padding: 0;
+
+  border: none;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #1364b5;
+
+}
+
+.panel .panel-heading {
+
+  background: #535353;
+
+  padding: 15px;
+
+  border-radius: 0;
+
+}
+
+.panel .panel-heading .btn {
+
+  color: #fff;
+
+  background-color: #000;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  padding: 7px 15px;
+
+  border: none;
+
+  border-radius: 0;
+
+  transition: all 0.3s ease 0s;
+
+}
+
+.panel .panel-heading .btn:hover {
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.panel .panel-heading .form-horizontal .form-group {
+
+  margin: 0;
+
+}
+
+.panel .panel-heading .form-horizontal label {
+
+  color: #fff;
+
+  margin-right: 10px;
+
+}
+
+.panel .panel-heading .form-horizontal .form-control {
+
+  display: inline-block;
+
+  width: 80px;
+
+  border: none;
+
+  border-radius: 0;
+
+}
+
+.panel .panel-heading .form-horizontal .form-control:focus {
+
+  box-shadow: none;
+
+  border: none;
+
+}
+
+.panel .panel-body {
+
+  padding: 0;
+
+  border-radius: 0;
+
+}
+
+.panel .panel-body .table thead tr th {
+
+  color: #fff;
+
+  background: #8D8D8D;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  padding: 12px;
+
+  border-bottom: none;
+
+}
+
+.panel .panel-body .table thead tr th:nth-of-type(1) {
+
+  width: 120px;
+
+}
+
+.panel .panel-body .table thead tr th:nth-of-type(3) {
+
+  width: 50%;
+
+}
+
+.panel .panel-body .table tbody tr td {
+
+  color: #555;
+
+  background: #fff;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  padding: 13px;
+
+  vertical-align: middle;
+
+  border-color: #e7e7e7;
+
+}
+
+.panel .panel-body .table tbody tr:nth-child(odd) td {
+
+  background: #f5f5f5;
+
+}
+
+.panel .panel-body .table tbody .action-list {
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+
+}
+
+.panel .panel-body .table tbody .action-list li {
+
+  display: inline-block;
+
+}
+
+.panel .panel-body .table tbody .action-list li a {
+
+  color: #fff;
+
+  font-size: 13px;
+
+  line-height: 28px;
+
+  height: 28px;
+
+  width: 33px;
+
+  padding: 0;
+
+  border-radius: 0;
+
+  transition: all 0.3s ease 0s;
+
+}
+
+.panel .panel-body .table tbody .action-list li a:hover {
+
+  box-shadow: 0 0 5px #ddd;
+
+}
+
+.panel .panel-footer {
+
+  color: #fff;
+
+  background: #535353;
+
+  font-size: 16px;
+
+  line-height: 33px;
+
+  padding: 25px 15px;
+
+  border-radius: 0;
+
+}
+
+.pagination {
+
+  margin: 0;
+
+}
+
+.pagination li a {
+
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  margin: 0 2px;
+
+  border: none;
+
+  border-radius: 0;
+
+  transition: all 0.3s ease 0s;
+
+}
+
+.pagination li a:hover,
+
+.pagination li a:focus,
+
+.pagination li.active a {
+
+  color: #fff;
+
+  background-color: #000;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+} */
+h1 {
+
+  text-align: center;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #202020;
+
+  text-transform: uppercase;
+
+  word-spacing: 1px;
+
+  letter-spacing: 2px;
+
+  text-decoration: underline;
+
+}
+
+.panel {
+
+  padding: 0;
+
+  border: none;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #1364b5;
+
+}
+
+.panel .panel-heading {
+
+  background: #535353;
+
+  padding: 15px;
+
+  border-radius: 0;
+
+}
+
+.panel .panel-heading .btn {
+
+  color: #fff;
+
+  background-color: #000;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  padding: 7px 15px;
+
+  border: none;
+
+  border-radius: 0;
+
+  transition: all 0.3s ease 0s;
+
+}
+
+.panel .panel-heading .btn:hover {
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.panel .panel-heading .form-horizontal .form-group {
+
+  margin: 0;
+
+}
+
+.panel .panel-heading .form-horizontal label {
+
+  color: #fff;
+
+  margin-right: 10px;
+
+}
+
+.panel .panel-heading .form-horizontal .form-control {
+
+  display: inline-block;
+
+  width: 80px;
+
+  border: none;
+
+  border-radius: 0;
+
+}
+
+.panel .panel-heading .form-horizontal .form-control:focus {
+
+  box-shadow: none;
+
+  border: none;
+
+}
+
+.panel .panel-body {
+
+  padding: 0;
+
+  border-radius: 0;
+
+}
+
+.panel .panel-body .table thead tr th {
+
+  color: #fff;
+
+  background: #8D8D8D;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  padding: 12px;
+
+  border-bottom: none;
+
+}
+
+.panel .panel-body .table thead tr th:nth-of-type(1) {
+
+  width: 120px;
+
+}
+
+.panel .panel-body .table thead tr th:nth-of-type(3) {
+
+  width: 50%;
+
+}
+
+.panel .panel-body .table tbody tr td {
+
+  color: #555;
+
+  background: #fff;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  padding: 13px;
+
+  vertical-align: middle;
+
+  border-color: #e7e7e7;
+
+}
+
+.panel .panel-body .table tbody tr:nth-child(odd) td {
+
+  background: #f5f5f5;
+
+}
+
+.panel .panel-body .table tbody .action-list {
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+
+}
+
+.panel .panel-body .table tbody .action-list li {
+
+  display: inline-block;
+
+}
+
+.panel .panel-body .table tbody .action-list li a {
+
+  color: #fff;
+
+  font-size: 13px;
+
+  line-height: 28px;
+
+  height: 28px;
+
+  width: 33px;
+
+  padding: 0;
+
+  border-radius: 0;
+
+  transition: all 0.3s ease 0s;
+
+}
+
+.panel .panel-body .table tbody .action-list li a:hover {
+
+  box-shadow: 0 0 5px #ddd;
+
+}
+
+.panel .panel-footer {
+
+  color: #fff;
+
+  background: #535353;
+
+  font-size: 16px;
+
+  line-height: 33px;
+
+  padding: 25px 15px;
+
+  border-radius: 0;
+
+}
+
+.pagination {
+
+  margin: 0;
+
+}
+
+.pagination li a {
+
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  margin: 0 2px;
+
+  border: none;
+
+  border-radius: 0;
+
+  transition: all 0.3s ease 0s;
+
+}
+
+.pagination li a:hover,
+
+.pagination li a:focus,
+
+.pagination li.active a {
+
+  color: #fff;
+
+  background-color: #000;
+
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+
+}

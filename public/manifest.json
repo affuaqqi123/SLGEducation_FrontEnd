@@ -1,0 +1,22 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "64x64 32x32 24x24 16x16"
+    }
+  ],
+  "videos": [
+    {
+      "src": "WhatsApp.mp4",
+      "type": "video/mp4"
+      
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,24 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+}
+
+html {
+    height: 100%;
+}
+
+.questions-container {
+    width: auto;
+    height: 100vh;
+}
+
+
+.questions-heading {
+    margin-top: 20px;
+}
+
+.add-button {
+    margin-bottom: 20px;
+} */
